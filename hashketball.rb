@@ -192,6 +192,8 @@ def big_shoe_rebounds
  player_with_largest_shoe(all_players)[:rebounds]
 end
 
+# Bonus Questions:
+
 def most_points_scored
   player_with_most_points(all_players)[:player_name]
 end
