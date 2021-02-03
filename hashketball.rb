@@ -137,14 +137,15 @@ def team(team_name)
 end
 
 def team_names
-  teams = []
-  teams = game_hash[:home][:team_name], game_hash[:away][:team_name]
+  game_hash[:home][:team_name], game_hash[:away][:team_name]
 end
 
 def team_colors(team_name)
-  game_hash.each { |location, team_data|
+  game_hash.each do |location, team_data|
     if team_data[:team_name] == team_name
-      return team_data[:colors] }
+      return team_data[:colors]
+    end
+  end
 end
 
 def all_players
