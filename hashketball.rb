@@ -188,8 +188,8 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
- player_with_largest_shoe(all_players[:rebounds]
- binding.pry
+ player_with_largest_shoe(all_players)[:rebounds]
+ #binding.pry
 end
   
 
