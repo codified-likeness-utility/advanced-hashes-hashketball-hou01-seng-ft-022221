@@ -127,7 +127,7 @@ def game_hash
   }
 end
 
-def all_players(game_hash)
+def all_players
   game_hash[:home][:players] + game_hash[:away][:players]
 end
 
@@ -188,8 +188,7 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds(game_hash)
- player_with_largest_shoe(all_players)
- binding.pry
+ player_with_largest_shoe(all_players(game_hash))[:rebounds]
 end
   
 
