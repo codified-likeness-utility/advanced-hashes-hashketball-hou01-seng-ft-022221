@@ -144,12 +144,6 @@ def team(team_name)
   end
 end
 
-def get_players
-  game_hash.map do |_, team_data|
-    team_data[:players]
-  end.flatten
-end
-
 def get_player_by_name(player_name)
   all_players.find do |player|
     player[:player_name] == player_name
