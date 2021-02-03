@@ -142,10 +142,9 @@ def team_names
 end
 
 def team_colors(team_name)
-  game_hash.each do |location, team_data|
+  game_hash.each { |location, team_data|
     if team_data[:team_name] == team_name
-      return team_data[:colors]
-    end
+      return team_data[:colors] }
   end
 end
 
@@ -170,8 +169,7 @@ def player_with_largest_shoe(all_players)
 end
 
 def player_numbers(team_name)
-  team(team_name)[:players].map { |number:, **|
-    number }
+  team(team_name)[:players].map { |number:, **| number }
 end
 
 def player_stats(player_name)
