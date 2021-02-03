@@ -170,9 +170,8 @@ def player_with_largest_shoe(all_players)
 end
 
 def player_numbers(team_name)
-  team(team_name)[:players].map do |number:, **|
-    number
-  end
+  team(team_name)[:players].map { |number:, **|
+    number }
 end
 
 def player_stats(player_name)
