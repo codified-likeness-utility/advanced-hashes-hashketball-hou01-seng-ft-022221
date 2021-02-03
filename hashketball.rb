@@ -127,10 +127,6 @@ def game_hash
   }
 end
 
-def all_players
-  game_hash[:home][:players] + game_hash[:away][:players]
-end
-
 def team(team_name)
   case team_name
   when game_hash[:home][:team_name]
@@ -140,9 +136,26 @@ def team(team_name)
   end
 end
 
+def team_names
+  teams = []
+  teams = game_hash[:home][:team_name], game_hash[:away][:team_name]
+end
+
+def team_colors(team_name)
+  game_hash.each do |location, team_data|
+    if team_data[:team_name] == team_name
+      return team_data[:colors]
+    end
+  end
+end
+
+def all_players
+  game_hash[:home][:players] + game_hash[:away][:players]
+end
+
 def get_player_by_name(player_name)
-  all_players.find do |player|
-    player[:player_name] == player_name
+  all_players.find { |player|
+    player[:player_name] == player_name}
   end
 end
 
@@ -156,19 +169,6 @@ end
 
 def player_with_largest_shoe(all_players)
   all_players.max { |p1, p2| p1[:shoe] <=> p2[:shoe] }
-end
-
-def team_colors(team_name)
-  game_hash.each do |location, team_data|
-    if team_data[:team_name] == team_name
-      return team_data[:colors]
-    end
-  end
-end
-
-def team_names
-  teams = []
-  teams = game_hash[:home][:team_name], game_hash[:away][:team_name]
 end
 
 def player_numbers(team_name)
