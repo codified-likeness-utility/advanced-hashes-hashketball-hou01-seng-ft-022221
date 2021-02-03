@@ -133,7 +133,6 @@ end
 
 def player_with_largest_shoe(all_players)
   all_players.max { |p1, p2| p1[:shoe] <=> p2[:shoe] }
-  binding.pry
 end
 
 def team(team_name)
