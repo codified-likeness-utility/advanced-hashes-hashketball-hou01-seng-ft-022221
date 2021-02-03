@@ -156,7 +156,6 @@ end
 def get_player_by_name(player_name)
   all_players.find { |player|
     player[:player_name] == player_name}
-  end
 end
 
 def num_points_scored(player_name)
