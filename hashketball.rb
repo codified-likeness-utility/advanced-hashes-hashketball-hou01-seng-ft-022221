@@ -148,6 +148,16 @@ def team_colors(team_name)
   end
 end
 
+def home_team_points
+  home_points = team("Brooklyn Nets")[:players].map { |points:, **| points }
+  home_points.sum
+end
+
+def away_team_points
+  away_points = team("Charlotte Hornets")[:players].map { |points:, **| points }
+  away_points.sum
+end
+
 def all_players
   game_hash[:home][:players] + game_hash[:away][:players]
 end
