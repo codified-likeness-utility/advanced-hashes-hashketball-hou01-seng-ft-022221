@@ -187,4 +187,12 @@ end
 def most_points_scored
   player_with_most_points(all_players)[:player_name]
 end
+
+def winning_team
+  if away_team_points > home_team_points
+    return game_hash[:away][:team_name]
+  else
+    return game_hash[:home][:team_name]
+  end
+end
   
