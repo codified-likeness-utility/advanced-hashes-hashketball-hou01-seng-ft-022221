@@ -188,7 +188,7 @@ def player_stats(player_name)
   get_player_by_name(player_name)
 end
 
-def big_shoe_rebounds(game_hash)
+def big_shoe_rebounds
  #player_with_largest_shoe(all_players(game_hash))[:rebounds]
 end
   
