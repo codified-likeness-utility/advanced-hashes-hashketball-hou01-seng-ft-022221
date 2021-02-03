@@ -151,7 +151,7 @@ def get_players
 end
 
 def get_player_by_name(player_name)
-  get_players.find do |player|
+  all_players.find do |player|
     player[:player_name] == player_name
   end
 end
@@ -189,7 +189,6 @@ end
 
 def big_shoe_rebounds
  player_with_largest_shoe(all_players)[:rebounds]
- #binding.pry
 end
   
 
