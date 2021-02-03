@@ -170,7 +170,6 @@ end
 
 def player_with_most_points(all_players)
   all_players.max { |p1, p2| p1[:points] <=> p2[:points] }
-  end
 end
 
 def player_numbers(team_name)
