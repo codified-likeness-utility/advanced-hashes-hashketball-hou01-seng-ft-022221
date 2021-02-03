@@ -131,10 +131,6 @@ def all_players
   game_hash[:home][:players] + game_hash[:away][:players]
 end
 
-def player_with_largest_shoe(all_players)
-  all_players.max { |p1, p2| p1[:shoe] <=> p2[:shoe] }
-end
-
 def team(team_name)
   case team_name
   when game_hash[:home][:team_name]
@@ -156,6 +152,10 @@ end
 
 def shoe_size(player_name)
   get_player_by_name(player_name)[:shoe]
+end
+
+def player_with_largest_shoe(all_players)
+  all_players.max { |p1, p2| p1[:shoe] <=> p2[:shoe] }
 end
 
 def team_colors(team_name)
