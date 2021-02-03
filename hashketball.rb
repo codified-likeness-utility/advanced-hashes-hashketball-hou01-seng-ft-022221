@@ -187,7 +187,7 @@ def player_stats(player_name)
   get_player_by_name(player_name)
 end
 
-def big_shoe_rebounds
+def big_shoe_rebounds(game_hash)
  player_with_largest_shoe(all_players)
  binding.pry
 end
